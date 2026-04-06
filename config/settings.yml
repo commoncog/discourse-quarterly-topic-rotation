@@ -1,0 +1,4 @@
+plugins:
+  quarterly_topic_rotation_enabled:
+    default: false
+    client: true

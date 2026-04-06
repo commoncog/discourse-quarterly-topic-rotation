@@ -1,0 +1,40 @@
+en:
+  js:
+    discourse_automation:
+      scriptables:
+        quarterly_topic_rotation:
+          title: Quarterly Topic Rotation
+          description: >
+            Seeds a dedicated category on first setup, then rotates it on the first day
+            of each quarter in Discourse's time zone while healing incomplete prior runs.
+          fields:
+            target_category:
+              label: Category
+              description: Use a dedicated category for the quarterly topics managed by this automation.
+            title_template:
+              label: Topic title template
+              description: >
+                Template for the new topic's title.
+                Include a quarter placeholder so each run renders a unique title.
+                Placeholders: {{quarter_label}} (e.g. "Q3 2026"), {{quarter}} (e.g. "Q3"), {{year}} (e.g. "2026").
+            post_body_template:
+              label: Opening post body
+              description: >
+                Template for the first post of the new topic. Same placeholders as the title.
+            closing_message:
+              label: Closing message (optional)
+              description: >
+                A final reply posted once in the old topic before it is closed.
+                Additional placeholder: {{new_topic_url}} (link to the new topic).
+            archive_old_topic:
+              label: Archive old topic
+              description: >
+                If enabled, the old topic will be archived (hidden from category listing)
+                in addition to being closed. If disabled, it will only be closed.
+            skip_quarter_check:
+              label: Skip quarter-boundary check
+              description: >
+                If enabled, the script runs every time the trigger fires (useful for
+                testing). If disabled, it only creates new quarter topics on the first day
+                of January, April, July, and October in Discourse's time zone, except for
+                the initial first-run seed and later cleanup recovery.
