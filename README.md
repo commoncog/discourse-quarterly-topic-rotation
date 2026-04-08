@@ -124,6 +124,21 @@ These placeholders work in the title template, post body, and closing message:
 4. Watch the Discourse logs (`/admin/logs`) for entries prefixed with `[quarterly-topic-rotation]`.
 5. Once confirmed working, uncheck the skip flag and set the trigger back to monthly.
 
+### RSpec tests
+**Note that RSpec tests are AI generated and have not yet been run in a Discourse install.**
+
+Automated RSpec coverage lives in `spec/integration/quarterly_topic_rotation_spec.rb`. Run it from the root of a Discourse checkout with the plugin installed:
+
+```sh
+LOAD_PLUGINS=1 bundle exec rspec plugins/discourse-quarterly-topic-rotation/spec/integration/quarterly_topic_rotation_spec.rb
+```
+
+Or run the whole plugin spec suite via Discourse's plugin task:
+
+```sh
+bundle exec rake "plugin:spec[discourse-quarterly-topic-rotation]"
+```
+
 ## Troubleshooting
 
 - **"Not the first day of a quarter in Time.zone, and no bootstrap or recovery work is needed. Skipping."** — Expected behavior when the automation fires off-cycle after the category is already initialized and there is no incomplete cleanup to finish. Enable "Skip quarter-boundary check" if testing.
