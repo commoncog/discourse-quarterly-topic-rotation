@@ -3,8 +3,8 @@
 # name: discourse-quarterly-topic-rotation
 # about: Automatically rotates topics on a quarterly basis — archives the current topic and creates a new one with the next quarter's label.
 # version: 0.1.0
-# authors: Your Name
-# url: https://github.com/your-org/discourse-quarterly-topic-rotation
+# authors: Cedric Chin
+# url: https://github.com/commoncog/discourse-quarterly-topic-rotation
 # required_version: 2.7.0
 
 enabled_site_setting :quarterly_topic_rotation_enabled
