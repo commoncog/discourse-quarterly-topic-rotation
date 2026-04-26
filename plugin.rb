@@ -145,9 +145,9 @@ module ::QuarterlyTopicRotation
   end
 end
 
-register_topic_custom_field_type QuarterlyTopicRotation::QUARTER_KEY_FIELD, :string
-
 after_initialize do
+  register_topic_custom_field_type QuarterlyTopicRotation::QUARTER_KEY_FIELD, :string
+
   reloadable_patch do
     if defined?(DiscourseAutomation)
       DiscourseAutomation::Scriptable.add(:quarterly_topic_rotation) do
