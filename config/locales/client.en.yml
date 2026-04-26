@@ -3,10 +3,6 @@ en:
     discourse_automation:
       scriptables:
         quarterly_topic_rotation:
-          title: Quarterly Topic Rotation
-          description: >
-            Seeds a dedicated category on first setup, then rotates it on the first day
-            of each quarter in Discourse's time zone while healing incomplete prior runs.
           fields:
             target_category:
               label: Category
