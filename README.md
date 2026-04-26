@@ -50,7 +50,7 @@ If not already active, search for `discourse_automation_enabled` in Site Setting
 
 ### Step 3: Create the automation
 
-Navigate to **Admin → Plugins → Automations** (or go to `/admin/plugins/discourse-automation`), then click **New**.
+Navigate to **Admin → Plugins → Automations** (or go to `/admin/plugins/automation/automation`), then click **New**.
 
 | Setting | Value |
 |---|---|
