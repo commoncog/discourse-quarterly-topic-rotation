@@ -28,7 +28,7 @@ hooks:
     - exec:
         cd: $home/plugins
         cmd:
-          - git clone https://github.com/your-org/discourse-quarterly-topic-rotation.git
+          - git clone https://github.com/commoncog/discourse-quarterly-topic-rotation.git
 ```
 
 Then rebuild:
